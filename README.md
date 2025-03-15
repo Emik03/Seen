@@ -1,6 +1,6 @@
 # Seen
 
-Adds a [sleeve](github.com/larswijn/CardSleeves) to [Balatro](https://balatrogame.com/) that negates score requirements, made for head-to-head competitions. Note that this sleeve is not designed to work past ante 37.
+Adds a [sleeve](https://github.com/larswijn/CardSleeves) to [Balatro](https://balatrogame.com/) that negates score requirements, made for head-to-head competitions. Note that this sleeve is not designed to work past ante 37.
 
 # Installation
 
