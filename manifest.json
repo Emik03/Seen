@@ -1,0 +1,20 @@
+{
+	"id": "Seen",
+	"name": "Seen",
+	"author": ["Emik"],
+	"description": "Adds a sleeve that negates score requirements.",
+	"prefix": "Seen",
+	"main_file": "src/main.lua",
+	"priority": 0,
+	"badge_colour": "8BE9FD",
+	"badge_text_colour": "44475A",
+	"display_name": "Seen (Emik)",
+	"version": "0.0.1",
+	"dependencies": [
+		"Steamodded (>=1.*)",
+		"Lovely (>=0.6)",
+		"CardSleeves (>=1.5.3)"
+	],
+	"conflicts": [],
+	"provides": []
+}
