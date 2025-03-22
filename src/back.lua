@@ -12,8 +12,14 @@ local function sleeve_effect()
     }
 
     play_sound('gong', 0.3 + (G.GAME.current_round.hands_left * 0.1))
+
     -- The reason not to use infinity here is to make it worth with OmegaNum.
     G.GAME.blind.chips = G.GAME.current_round.hands_left == 0 and 0 or 1.7976931348623157e+308
+
+    if G.GAME.current_round.hands_left == 0 then
+        G.GAME.current_round.hands_left = G.GAME.round_resets.hands - 1
+    end
+
     return true
 end
 

@@ -6,5 +6,5 @@ SMODS.Atlas {
     py = 34,
     key = "modicon",
     -- every version of Balatro is personalized
-    path = "Icon" .. tostring(math.random(1, 9)) .. ".png",
+    path = "Icon" .. math.random(1, 9) .. ".png",
 }
