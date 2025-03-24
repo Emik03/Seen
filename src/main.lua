@@ -35,7 +35,9 @@ local function sleeve_effect()
 
     if G.GAME.current_round.hands_left == 0 then
         ease_dollars(G.GAME.round_resets.hands - 1)
-        G.STATE = G.STATES.NEW_ROUND
+        G.STATE = G.STATES.ROUND_EVAL
+    else
+        G.STATE = G.STATES.DRAW_TO_HAND
     end
 
     return true
