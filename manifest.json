@@ -9,7 +9,7 @@
 	"badge_colour": "8BE9FD",
 	"badge_text_colour": "44475A",
 	"display_name": "Seen (Emik)",
-	"version": "0.1.0",
+	"version": "0.1.1~do-not-use",
 	"dependencies": [
 		"Steamodded (>=1.*)",
 		"Lovely (>=0.6)",

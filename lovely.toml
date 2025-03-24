@@ -1,0 +1,36 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 2147483647
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "if game_over then"
+position = "at"
+payload = "if game_over and not G.GAME.seen_sleeve then"
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "G.STATE = G.STATES.NEW_ROUND"
+position = "at"
+payload = "G.STATE = (G.GAME.current_round.hands_left < 1 and G.GAME.seen_sleeve) and G.STATES.DRAW_TO_HAND or G.STATES.NEW_ROUND"
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "if #G.hand.cards < 1 and #G.deck.cards < 1 and #G.play.cards < 1 then"
+position = "at"
+payload = "if #G.hand.cards < 1 and #G.deck.cards < 1 and #G.play.cards < 1 and not G.GAME.seen_sleeve then"
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "if #G.hand.cards < 1 and #G.deck.cards < 1 then"
+position = "at"
+payload = "if #G.hand.cards < 1 and #G.deck.cards < 1 and not G.GAME.seen_sleeve then"
+match_indent = true
