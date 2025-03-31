@@ -1,5 +1,4 @@
 assert(SMODS.load_file('src/back.lua'))()
-assert(SMODS.load_file('src/util.lua'))()
 
 SMODS.Atlas {
     px = 34,
