@@ -80,6 +80,11 @@ end
 local orig_end_round = end_round
 
 function end_round()
+    if not G.GAME.selected_sleeve or G.GAME.selected_sleeve ~= "sleeve_Seen_Seen" then
+        orig_end_round()
+        return
+    end
+
     if not G.GAME.current_round.prevent_end_round_call then
         if #G.deck.cards < 1 and not G.GAME.current_round.end_round_zero_hands then
             G.GAME.blind.chips = 0
